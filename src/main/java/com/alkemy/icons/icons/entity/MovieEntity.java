@@ -18,7 +18,7 @@ import java.util.Set;
 public class MovieEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private long Id;
+    private long id;
 
     private String image;
 
@@ -51,7 +51,7 @@ public class MovieEntity {
         if (getClass() != obj.getClass())
             return false;
         final MovieEntity other = (MovieEntity) obj;
-        return other.Id == this.Id;
+        return other.id == this.id;
     }
 
     // public void addCharacter(CharacterEntity movie){this.characters.add(character);}
