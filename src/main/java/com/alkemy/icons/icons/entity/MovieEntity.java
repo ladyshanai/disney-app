@@ -1,9 +1,9 @@
 package com.alkemy.icons.icons.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -14,7 +14,6 @@ import java.util.Set;
 @Table(name = "movies")
 @Getter
 @Setter
-
 public class MovieEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -25,7 +24,8 @@ public class MovieEntity {
     private String title;
 
     @Column(name = "creation_date")
-    @DateTimeFormat(pattern = "yyyy/MM/dd")
+    @DateTimeFormat(pattern = ("MM/dd/yyyy") )
+    @JsonFormat(pattern = "MM/dd/yyyy")
     private LocalDate creationDate;
 
     private long calification;

@@ -1,8 +1,6 @@
 package com.alkemy.icons.icons.controller;
-
 import com.alkemy.icons.icons.dto.MovieDTO;
 import com.alkemy.icons.icons.service.MovieService;
-import com.alkemy.icons.icons.service.impl.MovieServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
